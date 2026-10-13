@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZIVA TRENDY THREADS | Handcrafted Ethnic & Contemporary Wear</title>
+    <meta name="description" content="Discover exquisite ethnic & contemporary women's wear from ZIVA TRENDY THREADS. Browse our latest collection of Kurtis, Co-ord Sets, Anarkalis & Sarees. Direct Instagram enquiry.">
+    
+    <!-- Open Graph / Meta Tags for Instagram & WhatsApp Sharing -->
+    <meta property="og:title" content="ZIVA TRENDY THREADS - Boutique Catalog">
+    <meta property="og:description" content="Explore our latest collection of handcrafted ethnic and contemporary women's wear. Enquire directly on Instagram.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&q=80">
+    <meta name="theme-color" content="#FAF7F2">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#FAF7F2',       /* Warm off-white background */
+                            card: '#FFFFFF',     /* Pure white for product cards */
+                            charcoal: '#222222', /* Deep rich charcoal body text */
+                            accent: '#C86D51',   /* Muted Terracotta accent color */
+                            accentHover: '#B0593F',
+                            border: '#E8E2D9',   /* Soft neutral border line */
+                            muted: '#7A7570',    /* Muted text grey */
+                            sage: '#7C8E7B',      /* Optional badge color */
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    aspectRatio: {
+                        '4/5': '4 / 5',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for specialized interactions -->
+    <style>
+        body {
+            background-color: #FAF7F2;
+            color: #222222;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Hide horizontal scrollbar for filter chips while keeping scroll functionality */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Modal backdrop transition */
+        .modal-backdrop {
+            background-color: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(4px);
+            transition: opacity 0.25s ease-in-out;
+        }
+
+        /* Smooth slide-up transition for bottom drawer / modals on mobile */
+        .drawer-slide {
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Custom radio buttons for size selector */
+        .size-radio:checked + label {
+            background-color: #222222;
+            color: #FFFFFF;
+            border-color: #222222;
+        }
+
+        .size-radio:disabled + label {
+            opacity: 0.4;
+            background-color: #F3EFEA;
+            text-decoration: line-through;
+            cursor: not-allowed;
+            border-color: #E8E2D9;
+        }
+
+        /* Image hover effect */
+        .product-img-container img {
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .product-card:hover .product-img-container img {
+            transform: scale(1.04);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-brand-accent selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-brand-charcoal text-white text-xs tracking-widest text-center py-2 px-4 font-medium uppercase">
+        ⚡ Instagram Direct Enquiries • Free Shipping across India on orders above ₹2,999
+    </div>
+
+    <!-- Sticky Brand Header -->
+    <header class="sticky top-0 z-30 bg-brand-bg/95 backdrop-blur-md border-b border-brand-border/60 transition-all">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+            
+            <!-- Instagram Quick Link (Left) -->
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="text-brand-charcoal hover:text-brand-accent transition flex items-center gap-1.5 text-xs font-medium tracking-wide">
+                <i class="fa-brands fa-instagram text-lg"></i>
+                <span class="hidden sm:inline">@ziva_trendy_threads</span>
+            </a>
+
+            <!-- Main Brand Logo -->
+            <div class="text-center">
+                <a href="#" onclick="resetAllFilters(); return false;" class="block">
+                    <h1 class="font-serif text-xl sm:text-3xl font-semibold tracking-widest text-brand-charcoal uppercase">
+                        ZIVA
+                    </h1>
+                    <span class="block text-[9px] sm:text-[11px] tracking-[0.25em] text-brand-accent uppercase font-medium mt-0.5">
+                        Trendy Threads
+                    </span>
+                </a>
+            </div>
+
+            <!-- WhatsApp Direct Button (Right) -->
+            <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="text-emerald-700 hover:text-emerald-800 transition flex items-center gap-1.5 text-xs font-medium tracking-wide">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span class="hidden sm:inline">Help & Enquiries</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-6xl w-full mx-auto px-4 sm:px-6 pt-6 pb-16">
+
+        <!-- Search Bar and Sorting Header -->
+        <div class="flex flex-col md:flex-row gap-3 items-center justify-between mb-6">
+            <!-- Search Input -->
+            <div class="relative w-full md:w-80">
+                <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-brand-muted text-xs"></i>
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Search dress code (e.g. ZTT-014), name..." 
+                    class="w-full bg-white border border-brand-border rounded-full pl-9 pr-8 py-2 text-xs sm:text-sm text-brand-charcoal placeholder-brand-muted focus:outline-none focus:border-brand-accent transition shadow-sm"
+                    oninput="handleFilterChange()"
+                >
+                <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-brand-muted hover:text-brand-charcoal text-xs">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Size Filter & Sort Controls -->
+            <div class="flex items-center gap-2 w-full md:w-auto justify-between md:justify-end text-xs">
+                <!-- Size Filter Dropdown -->
+                <div class="flex items-center gap-1.5 bg-white border border-brand-border rounded-full px-3 py-1.5 shadow-sm">
+                    <span class="text-brand-muted font-medium">Size:</span>
+                    <select id="sizeFilter" onchange="handleFilterChange()" class="bg-transparent font-semibold text-brand-charcoal focus:outline-none cursor-pointer">
+                        <option value="ALL">All Sizes</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                    </select>
+                </div>
+
+                <!-- Sort Dropdown -->
+                <div class="flex items-center gap-1.5 bg-white border border-brand-border rounded-full px-3 py-1.5 shadow-sm">
+                    <span class="text-brand-muted font-medium">Sort:</span>
+                    <select id="sortFilter" onchange="handleFilterChange()" class="bg-transparent font-semibold text-brand-charcoal focus:outline-none cursor-pointer">
+                        <option value="NEWEST">Newest First</option>
+                        <option value="PRICE_LOW">Price: Low to High</option>
+                        <option value="PRICE_HIGH">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category Filter Chips Slider -->
+        <div class="relative mb-6">
+            <div id="categoryChips" class="flex gap-2 overflow-x-auto no-scrollbar py-1 text-xs">
+                <!-- Category buttons injected dynamically -->
+            </div>
+        </div>
+
+        <!-- Result Counter & Active Filter Reset -->
+        <div class="flex items-center justify-between mb-6 pb-3 border-b border-brand-border/60 text-xs">
+            <p class="text-brand-muted">
+                Showing <span id="resultCount" class="font-semibold text-brand-charcoal">0</span> curated pieces
+            </p>
+            <button id="resetFiltersBtn" onclick="resetAllFilters()" class="hidden text-brand-accent font-medium hover:underline flex items-center gap-1">
+                <i class="fa-solid fa-rotate-left text-[10px]"></i> Reset Filters
+            </button>
+        </div>
+
+        <!-- Product Grid -->
+        <div id="productGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6">
+            <!-- Product Cards generated dynamically via JavaScript -->
+        </div>
+
+        <!-- Empty Results State -->
+        <div id="emptyState" class="hidden text-center py-16 px-4">
+            <div class="w-16 h-16 bg-brand-border/40 rounded-full flex items-center justify-center mx-auto mb-4 text-brand-muted text-xl">
+                <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+            <h3 class="font-serif text-lg text-brand-charcoal font-medium">No dresses match your filter</h3>
+            <p class="text-xs text-brand-muted mt-1 max-w-xs mx-auto">Try clearing your size or category selection to view all available designs.</p>
+            <button onclick="resetAllFilters()" class="mt-4 px-5 py-2 bg-brand-charcoal text-white rounded-full text-xs font-medium tracking-wider uppercase hover:bg-brand-accent transition">
+                Show All Dresses
+            </button>
+        </div>
+    </main>
+
+    <!-- Size Chart Modal -->
+    <div id="sizeChartModal" class="fixed inset-0 z-50 hidden modal-backdrop flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto p-6 shadow-2xl relative border border-brand-border">
+            <button onclick="closeSizeChart()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-stone-100 flex items-center justify-center text-brand-charcoal hover:bg-stone-200 transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="text-center mb-5">
+                <h3 class="font-serif text-xl font-semibold text-brand-charcoal">Size & Fit Guide</h3>
+                <p class="text-xs text-brand-muted mt-1">Standard Indian Women's Ready-to-Wear Measurements</p>
+            </div>
+
+            <!-- Unit Toggle Button (Inches / CM) -->
+            <div class="flex justify-center mb-6">
+                <div class="bg-stone-100 p-1 rounded-full flex gap-1 text-xs font-semibold">
+                    <button id="unitInchesBtn" onclick="toggleSizeUnit('inches')" class="px-4 py-1.5 rounded-full bg-white text-brand-charcoal shadow-sm transition">Inches</button>
+                    <button id="unitCmBtn" onclick="toggleSizeUnit('cm')" class="px-4 py-1.5 rounded-full text-brand-muted hover:text-brand-charcoal transition">Centimeters</button>
+                </div>
+            </div>
+
+            <!-- Size Chart Table -->
+            <div class="overflow-x-auto">
+                <table class="w-full text-xs text-center border-collapse">
+                    <thead>
+                        <tr class="bg-stone-50 text-brand-charcoal border-b border-brand-border">
+                            <th class="py-2.5 px-3 font-semibold text-left">Size</th>
+                            <th class="py-2.5 px-3 font-semibold">Bust</th>
+                            <th class="py-2.5 px-3 font-semibold">Waist</th>
+                            <th class="py-2.5 px-3 font-semibold">Hip</th>
+                            <th class="py-2.5 px-3 font-semibold">Length</th>
+                        </tr>
+                    </thead>
+                    <tbody id="sizeTableBody" class="divide-y divide-brand-border/60 text-stone-700">
+                        <!-- Dynamic rows injected based on unit -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Measuring Tip Box -->
+            <div class="mt-6 p-4 rounded-xl bg-brand-bg border border-brand-border text-xs text-brand-muted leading-relaxed flex gap-3 items-start">
+                <i class="fa-solid fa-tape text-brand-accent text-sm mt-0.5"></i>
+                <div>
+                    <strong class="text-brand-charcoal block mb-0.5 font-medium">How to measure yourself:</strong>
+                    Measure relaxed around the fullest part of your bust and hips. If you fall between two sizes, we recommend picking the larger size for standard tailored comfort.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Full-Screen Product Detail Modal / Drawer -->
+    <div id="productDetailModal" class="fixed inset-0 z-50 hidden modal-backdrop flex items-end sm:items-center justify-center p-0 sm:p-4">
+        <div id="detailContainer" class="bg-white w-full sm:max-w-2xl sm:rounded-2xl rounded-t-2xl max-h-[92vh] sm:max-h-[85vh] overflow-y-auto shadow-2xl relative flex flex-col md:flex-row drawer-slide border border-brand-border">
+            
+            <!-- Close Modal Button -->
+            <button onclick="closeProductDetail()" class="absolute top-3 right-3 z-20 w-9 h-9 rounded-full bg-white/80 backdrop-blur-md text-brand-charcoal flex items-center justify-center hover:bg-white shadow transition">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <!-- Product Image Section (Left / Top) -->
+            <div class="w-full md:w-1/2 bg-stone-100 relative">
+                <!-- Main Featured Photo -->
+                <div class="aspect-4/5 w-full relative overflow-hidden bg-stone-200">
+                    <img id="detailMainImage" src="" alt="" class="w-full h-full object-cover">
+                    <span id="detailBadge" class="hidden absolute top-3 left-3 bg-brand-charcoal text-white text-[10px] font-semibold tracking-wider uppercase px-2.5 py-1 rounded-full"></span>
+                </div>
+                <!-- Gallery Thumbnails -->
+                <div id="detailThumbnails" class="flex gap-2 p-3 overflow-x-auto no-scrollbar bg-white/50 border-t border-brand-border/40">
+                    <!-- Thumbnails dynamic -->
+                </div>
+            </div>
+
+            <!-- Product Information & Enquiry Section (Right / Bottom) -->
+            <div class="w-full md:w-1/2 p-5 sm:p-6 flex flex-col justify-between bg-white">
+                <div>
+                    <!-- SKU / Dress Code Header -->
+                    <div class="flex items-center justify-between mb-1">
+                        <span id="detailCategory" class="text-[11px] font-semibold uppercase tracking-wider text-brand-accent"></span>
+                        <div class="flex items-center gap-1.5 bg-stone-100 px-2 py-0.5 rounded text-[11px] font-mono font-medium text-brand-charcoal border border-stone-200">
+                            <span>CODE:</span>
+                            <strong id="detailCode"></strong>
+                            <button onclick="copyDressCode()" title="Copy Code" class="text-brand-muted hover:text-brand-accent ml-1">
+                                <i class="fa-regular fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Title & Price -->
+                    <h2 id="detailTitle" class="font-serif text-xl sm:text-2xl font-semibold text-brand-charcoal leading-tight mb-2"></h2>
+                    <div id="detailPrice" class="text-lg font-bold text-brand-charcoal mb-4"></div>
+
+                    <div class="border-t border-b border-brand-border/60 py-3 mb-4 space-y-2 text-xs">
+                        <p class="flex items-baseline gap-2">
+                            <span class="text-brand-muted font-medium w-16">Fabric:</span>
+                            <span id="detailFabric" class="text-brand-charcoal font-medium"></span>
+                        </p>
+                        <p class="text-brand-muted leading-relaxed" id="detailDescription"></p>
+                    </div>
+
+                    <!-- Size Selection -->
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-xs font-semibold text-brand-charcoal uppercase tracking-wider">Select Size:</label>
+                            <button onclick="openSizeChart()" class="text-xs text-brand-accent hover:underline font-medium flex items-center gap-1">
+                                <i class="fa-solid fa-ruler-horizontal text-[10px]"></i> Size Chart
+                            </button>
+                        </div>
+                        <div id="detailSizeOptions" class="grid grid-cols-5 gap-2">
+                            <!-- Dynamic size radios -->
+                        </div>
+                        <p id="sizeWarning" class="text-[11px] text-rose-600 mt-2 hidden font-medium">
+                            <i class="fa-solid fa-circle-exclamation mr-1"></i> Please select a size to proceed with enquiry.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Action Enquiry Buttons -->
+                <div class="space-y-2 pt-2 border-t border-brand-border/60">
+                    <!-- Instagram DM Button -->
+                    <button onclick="enquireOnInstagram()" class="w-full py-3 px-4 bg-gradient-to-r from-purple-600 via-pink-600 to-rose-500 text-white rounded-xl font-medium text-xs sm:text-sm tracking-wide uppercase shadow-md hover:opacity-95 transition flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-instagram text-lg"></i>
+                        <span>Enquire on Instagram DM</span>
+                    </button>
+
+                    <!-- WhatsApp Enquiry Button -->
+                    <button onclick="enquireOnWhatsApp()" class="w-full py-3 px-4 bg-emerald-700 text-white rounded-xl font-medium text-xs sm:text-sm tracking-wide uppercase shadow-md hover:bg-emerald-800 transition flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Enquire on WhatsApp</span>
+                    </button>
+                    
+                    <p class="text-[10px] text-center text-brand-muted pt-1">
+                        🔒 Tap opens pre-filled enquiry with dress code & size
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Brand Footer -->
+    <footer class="bg-stone-900 text-stone-300 border-t border-stone-800 mt-auto text-xs">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Column 1: Brand Info -->
+            <div class="space-y-3">
+                <h3 class="font-serif text-lg text-white uppercase tracking-widest">ZIVA TRENDY THREADS</h3>
+                <p class="text-stone-400 leading-relaxed max-w-sm">
+                    Curated ethnic, fusion & contemporary wear crafted for modern women. Handpicked fabrics with timeless silhouette appeal.
+                </p>
+            </div>
+
+            <!-- Column 2: Quick Links & Contact -->
+            <div class="space-y-2">
+                <h4 class="text-white font-semibold uppercase tracking-wider mb-3">Customer Support</h4>
+                <p class="flex items-center gap-2">
+                    <i class="fa-brands fa-instagram text-brand-accent"></i>
+                    <span>Instagram: <a href="https://instagram.com" target="_blank" class="text-white underline hover:text-brand-accent">@ziva_trendy_threads</a></span>
+                </p>
+                <p class="flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-emerald-500"></i>
+                    <span>WhatsApp / Call: +91 98765 43210</span>
+                </p>
+                <p class="flex items-center gap-2 text-stone-400">
+                    <i class="fa-solid fa-clock text-stone-500"></i>
+                    <span>DM Hours: 10:00 AM – 8:00 PM IST</span>
+                </p>
+            </div>
+
+            <!-- Column 3: Boutique Policy -->
+            <div class="space-y-2 text-stone-400">
+                <h4 class="text-white font-semibold uppercase tracking-wider mb-3">Shipping & Policies</h4>
+                <p>Dispatch within 24-48 business hours across India.</p>
+                <p>Easy exchange available on size issues within 3 days.</p>
+                <p>Every garment goes through strict quality checks before packing.</p>
+            </div>
+        </div>
+
+        <div class="border-t border-stone-800 py-4 text-center text-[11px] text-stone-500">
+            © 2026 ZIVA TRENDY THREADS. All Rights Reserved. Designed with <i class="fa-solid fa-heart text-rose-500"></i> for fashion lovers.
+        </div>
+    </footer>
+
+    <script>
+        /* ==============================================================================
+         * PRODUCT DATABASE (JSON ARRAY)
+         * Non-technical instructions:
+         * To add a new dress, copy any object block inside PRODUCTS array below,
+         * paste it at the top, and update the fields.
+         * ============================================================================== */
+        const PRODUCTS = [
+            {
+                // Unique SKU identifier (Must be clear and readable)
+                dressCode: "ZTT-001",
+                // Dress Title
+                name: "Gulmohar Chanderi Silk Anarkali Set",
+                // Category options: Kurti, Co-ord Set, Anarkali, Western Dress, Saree
+                category: "Anarkali",
+                // Price formatted string
+                price: "₹2,499",
+                // Raw numeric price used for low-to-high / high-to-low sorting
+                rawPrice: 2499,
+                // Fabric material
+                fabric: "Pure Chanderi Silk with Cotton Lining & Dupatta",
+                // Description (1-2 lines detailing craft & style)
+                description: "Handcrafted Anarkali suit set featuring subtle zari hand-embroidery on neckline, paired with flowy pants and hand-blocked organza dupatta.",
+                // Image gallery URLs (1 to 5 images; first image is cover photo)
+                images: [
+                    "https://i.postimg.cc/QMbjFm19/Designer.png"
+                ],
+                // Availability map (true = available, false = greyed/struck through)
+                sizes: { S: true, M: true, L: true, XL: false, XXL: false },
+                // Badge flags
+                isNew: true,
+                isSoldOut: false
+            },
+            {
+                dressCode: "ZTT-002",
+                name: "Aura Sage Modal Satin Co-ord Set",
+                category: "Co-ord Set",
+                price: "₹1,850",
+                rawPrice: 1850,
+                fabric: "Premium Modal Satin",
+                description: "Relaxed fit two-piece printed co-ord set featuring a high-low button-down shirt and straight-leg trousers. Super silky & comfortable.",
+                images: [
+                    "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80"
+                ],
+                sizes: { S: true, M: true, L: true, XL: true, XXL: true },
+                isNew: true,
+                isSoldOut: false
+            },
+            {
+                dressCode: "ZTT-003",
+                name: "Indigo Hand-Block Print Straight Kurti",
+                category: "Kurti",
+                price: "₹1,299",
+                rawPrice: 1299,
+                fabric: "100% Breathable Malmal Cotton",
+                description: "Traditional Bagru indigo hand-block printed kurti with delicate mirror work on placket. Perfect for daily summer elegance.",
+                images: [
+                    "https://images.unsplash.com/photo-1583391733975-d227b3223011?auto=format&fit=crop&w=800&q=80"
+                ],
+                sizes: { S: false, M: true, L: true, XL: false, XXL: false },
+                isNew: false,
+                isSoldOut: false
+            },
+            {
+                dressCode: "ZTT-004",
+                name: "Rooh Rose Organza Floral Saree",
+                category: "Saree",
+                price: "₹3,199",
+                rawPrice: 3199,
+                fabric: "Sheer Soft Organza with Unstitched Silk Blouse Piece",
+                description: "Ethereal pastel rose pink printed organza saree with delicate scalloped lace border trim. Includes matching blouse fabric.",
+                images: [
+                    "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=800&q=80",
+                    "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80"
+                ],
+                sizes: { S: true, M: true, L: true, XL: true, XXL: true },
+                isNew: true,
+                isSoldOut: false
+            },
+            {
+                dressCode: "ZTT-005",
+                name: "Terracotta Linen Tiered Midi Dress",
+                category: "Western Dress",
+                price: "₹1,699",
+                rawPrice: 1699,
+                fabric: "Pure Slub Linen Cotton",
+                description: "Breezy tiered midi dress with adjustable tie-up shoulder straps and hidden side pockets. Effortless day-out style.",
+                images: [
+                    "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=800&q=80"
+                ],
+                sizes: { S: true, M: false, L: true, XL: false, XXL: false },
+                isNew: false,
+                isSoldOut: false
+            },
+            {
+                dressCode: "ZTT-006",
+                name: "Noor Chikankari Georgette Suit",
+                category: "Anarkali",
+                price: "₹2,899",
+                rawPrice: 2899,
+                fabric: "Faux Georgette with Chikankari Thread Work",
+                description: "Intricate all-over Lucknowi Chikankari embroidered suit with inner santoon lining and matching chiffon dupatta.",
+                images: [
+                    "https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=800&q=80"
+                ],
+                sizes: { S: false, M: false, L: false, XL: false, XXL: false },
+                isNew: false,
+                isSoldOut: true // Sold Out Example
+            },
+            {
+                dressCode: "ZTT-007",
+                name: "Miraya Velvet Embroidered Kurti Set",
+                category: "Kurti",
+                price: "₹2,250",
+                rawPrice: 2250,
+                fabric: "Micro Velvet with zari neck detailing",
+                description: "Rich micro velvet straight kurti with delicate gold zari embroidery on cuffs and neckline, paired with straight pants.",
+                images: [
+                    "https://i.postimg.cc/wvD4xqPK/images.jpg"
+                ],
+                sizes: { S: true, M: true, L: false, XL: true, XXL: true },
+                isNew: false,
+                isSoldOut: false
+            },
+            {
+                dressCode: "ZTT-008",
+                name: "Kashmiri Aari Work Modal Silk Saree",
+                category: "Saree",
+                price: "₹3,450",
+                rawPrice: 3450,
+                fabric: "Modal Silk",
+                description: "Exquisite Kashmiri Aari needlework embroidery along the saree pallu border. Comes with plain blouse piece.",
+                images: [
+                    "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=800&q=80"
+                ],
+                sizes: { S: true, M: true, L: true, XL: true, XXL: true },
+                isNew: true,
+                isSoldOut: false
+            }
+        ];
+
+        /* ==============================================================================
+         * STATE MANAGEMENT
+         * ============================================================================== */
+        let currentCategory = 'ALL';
+        let currentSelectedProduct = null;
+        let selectedSize = null;
+        let currentSizeUnit = 'inches'; // 'inches' or 'cm'
+
+        // Size Chart Master Measurement Matrix
+        const SIZE_CHART_DATA = [
+            { size: 'S (36)', bustInches: '34 - 35', waistInches: '28 - 29', hipInches: '37 - 38', lengthInches: '44 - 46', bustCm: '86 - 89', waistCm: '71 - 74', hipCm: '94 - 97', lengthCm: '111 - 117' },
+            { size: 'M (38)', bustInches: '36 - 37', waistInches: '30 - 31', hipInches: '39 - 40', lengthInches: '44 - 46', bustCm: '91 - 94', waistCm: '76 - 79', hipCm: '99 - 102', lengthCm: '111 - 117' },
+            { size: 'L (40)', bustInches: '38 - 39', waistInches: '32 - 33', hipInches: '41 - 42', lengthInches: '45 - 46', bustCm: '96 - 99', waistCm: '81 - 84', hipCm: '104 - 107', lengthCm: '114 - 117' },
+            { size: 'XL (42)', bustInches: '40 - 41', waistInches: '34 - 35', hipInches: '43 - 44', lengthInches: '45 - 46', bustCm: '101 - 104', waistCm: '86 - 89', hipCm: '109 - 112', lengthCm: '114 - 117' },
+            { size: 'XXL (44)', bustInches: '42 - 44', waistInches: '36 - 38', hipInches: '45 - 47', lengthInches: '46 - 47', bustCm: '106 - 112', waistCm: '91 - 96', hipCm: '114 - 119', lengthCm: '117 - 119' },
+        ];
+
+        /* ==============================================================================
+         * INITIALIZATION & RENDER LOGIC
+         * ============================================================================== */
+        window.onload = function() {
+            renderCategoryChips();
+            renderProducts();
+            renderSizeTable();
+        };
+
+        // Render dynamic category filter pill buttons
+        function renderCategoryChips() {
+            const categories = ['ALL', ...new Set(PRODUCTS.map(p => p.category))];
+            const container = document.getElementById('categoryChips');
+            
+            container.innerHTML = categories.map(cat => {
+                const isActive = cat === currentCategory;
+                return `
+                    <button 
+                        onclick="selectCategory('${cat}')"
+                        class="px-4 py-2 rounded-full font-medium whitespace-nowrap transition-all ${
+                            isActive 
+                            ? 'bg-brand-charcoal text-white shadow' 
+                            : 'bg-white text-brand-charcoal border border-brand-border hover:border-brand-accent'
+                        }"
+                    >
+                        ${cat === 'ALL' ? 'All Collection' : cat}
+                    </button>
+                `;
+            }).join('');
+        }
+
+        // Filter and render products on the grid
+        function renderProducts() {
+            const searchVal = document.getElementById('searchInput').value.trim().toLowerCase();
+            const sizeVal = document.getElementById('sizeFilter').value;
+            const sortVal = document.getElementById('sortFilter').value;
+
+            // Filter logic
+            let filtered = PRODUCTS.filter(p => {
+                // Category match
+                const matchCategory = (currentCategory === 'ALL' || p.category === currentCategory);
+                
+                // Search match (code, name, category, fabric)
+                const matchSearch = !searchVal || 
+                    p.dressCode.toLowerCase().includes(searchVal) || 
+                    p.name.toLowerCase().includes(searchVal) ||
+                    p.category.toLowerCase().includes(searchVal) ||
+                    p.fabric.toLowerCase().includes(searchVal);
+
+                // Size match
+                const matchSize = (sizeVal === 'ALL') || (p.sizes[sizeVal] === true);
+
+                return matchCategory && matchSearch && matchSize;
+            });
+
+            // Sorting logic
+            if (sortVal === 'PRICE_LOW') {
+                filtered.sort((a, b) => a.rawPrice - b.rawPrice);
+            } else if (sortVal === 'PRICE_HIGH') {
+                filtered.sort((a, b) => b.rawPrice - a.rawPrice);
+            } else if (sortVal === 'NEWEST') {
+                filtered.sort((a, b) => (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0));
+            }
+
+            // Update UI Counters
+            document.getElementById('resultCount').textContent = filtered.length;
+            
+            // Show / hide reset button
+            const isFiltered = currentCategory !== 'ALL' || searchVal !== '' || sizeVal !== 'ALL';
+            document.getElementById('resetFiltersBtn').classList.toggle('hidden', !isFiltered);
+            document.getElementById('clearSearchBtn').classList.toggle('hidden', searchVal === '');
+
+            const grid = document.getElementById('productGrid');
+            const emptyState = document.getElementById('emptyState');
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+
+            // Render Product Cards
+            grid.innerHTML = filtered.map(product => {
+                // Determine badges
+                let badgeHtml = '';
+                if (product.isSoldOut) {
+                    badgeHtml = `<span class="bg-stone-800 text-white text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full">Sold Out</span>`;
+                } else if (product.isNew) {
+                    badgeHtml = `<span class="bg-brand-accent text-white text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full">New In</span>`;
+                }
+
+                // Available size pill preview
+                const availSizes = Object.keys(product.sizes).filter(s => product.sizes[s]);
+
+                return `
+                    <div onclick="openProductDetail('${product.dressCode}')" class="product-card group bg-white border border-brand-border/70 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between">
+                        <div>
+                            <!-- Image Container with 4:5 Aspect Ratio -->
+                            <div class="product-img-container aspect-4/5 w-full bg-stone-100 relative overflow-hidden">
+                                <img 
+                                    src="${product.images[0]}" 
+                                    alt="${product.name}" 
+                                    loading="lazy"
+                                    class="w-full h-full object-cover object-center"
+                                >
+                                <div class="absolute top-2 left-2 flex gap-1 z-10">
+                                    ${badgeHtml}
+                                </div>
+                                <div class="absolute bottom-2 right-2 bg-black/60 backdrop-blur-sm text-white text-[10px] px-2 py-0.5 rounded-full font-mono">
+                                    ${product.dressCode}
+                                </div>
+                            </div>
+
+                            <!-- Card Body -->
+                            <div class="p-3 sm:p-4">
+                                <div class="text-[10px] font-semibold text-brand-accent uppercase tracking-wider mb-0.5">
+                                    ${product.category}
+                                </div>
+                                <h3 class="font-serif text-xs sm:text-sm text-brand-charcoal font-medium line-clamp-1 group-hover:text-brand-accent transition">
+                                    ${product.name}
+                                </h3>
+                                <div class="text-sm font-bold text-brand-charcoal mt-1">
+                                    ${product.price}
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card Footer Sizes Availability -->
+                        <div class="px-3 pb-3 sm:px-4 sm:pb-4 pt-0">
+                            <div class="flex items-center gap-1 text-[10px] text-brand-muted border-t border-brand-border/40 pt-2">
+                                <span class="text-[9px] uppercase tracking-wider font-medium">Sizes:</span>
+                                <div class="flex gap-1 overflow-x-auto no-scrollbar">
+                                    ${['S','M','L','XL','XXL'].map(sz => {
+                                        const inStock = product.sizes[sz];
+                                        return `<span class="${inStock ? 'text-brand-charcoal font-semibold' : 'text-stone-300 line-through'}">${sz}</span>`;
+                                    }).join(' ')}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        /* ==============================================================================
+         * EVENT HANDLERS & FILTERS
+         * ============================================================================== */
+        function selectCategory(cat) {
+            currentCategory = cat;
+            renderCategoryChips();
+            renderProducts();
+        }
+
+        function handleFilterChange() {
+            renderProducts();
+        }
+
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            renderProducts();
+        }
+
+        function resetAllFilters() {
+            currentCategory = 'ALL';
+            document.getElementById('searchInput').value = '';
+            document.getElementById('sizeFilter').value = 'ALL';
+            document.getElementById('sortFilter').value = 'NEWEST';
+            renderCategoryChips();
+            renderProducts();
+        }
+
+        /* ==============================================================================
+         * PRODUCT DETAIL MODAL & ENQUIRY LOGIC
+         * ============================================================================== */
+        function openProductDetail(code) {
+            const product = PRODUCTS.find(p => p.dressCode === code);
+            if (!product) return;
+
+            currentSelectedProduct = product;
+            selectedSize = null; // Reset size selection
+
+            // Populate Text Info
+            document.getElementById('detailCode').textContent = product.dressCode;
+            document.getElementById('detailCategory').textContent = product.category;
+            document.getElementById('detailTitle').textContent = product.name;
+            document.getElementById('detailPrice').textContent = product.price;
+            document.getElementById('detailFabric').textContent = product.fabric;
+            document.getElementById('detailDescription').textContent = product.description;
+            document.getElementById('sizeWarning').classList.add('hidden');
+
+            // Badge
+            const badgeEl = document.getElementById('detailBadge');
+            if (product.isSoldOut) {
+                badgeEl.textContent = 'SOLD OUT';
+                badgeEl.className = 'absolute top-3 left-3 bg-stone-800 text-white text-[10px] font-semibold tracking-wider uppercase px-2.5 py-1 rounded-full';
+                badgeEl.classList.remove('hidden');
+            } else if (product.isNew) {
+                badgeEl.textContent = 'NEW IN';
+                badgeEl.className = 'absolute top-3 left-3 bg-brand-accent text-white text-[10px] font-semibold tracking-wider uppercase px-2.5 py-1 rounded-full';
+                badgeEl.classList.remove('hidden');
+            } else {
+                badgeEl.classList.add('hidden');
+            }
+
+            // Render Images Gallery
+            const mainImg = document.getElementById('detailMainImage');
+            mainImg.src = product.images[0];
+            mainImg.alt = product.name;
+
+            const thumbsContainer = document.getElementById('detailThumbnails');
+            if (product.images.length > 1) {
+                thumbsContainer.classList.remove('hidden');
+                thumbsContainer.innerHTML = product.images.map((imgUrl, idx) => `
+                    <button onclick="setDetailMainImage('${imgUrl}')" class="w-12 h-14 rounded overflow-hidden border-2 border-transparent hover:border-brand-accent focus:border-brand-accent transition shrink-0 bg-stone-200">
+                        <img src="${imgUrl}" alt="Thumbnail ${idx + 1}" class="w-full h-full object-cover">
+                    </button>
+                `).join('');
+            } else {
+                thumbsContainer.classList.add('hidden');
+            }
+
+            // Render Size Selection Radio Options
+            const sizesContainer = document.getElementById('detailSizeOptions');
+            sizesContainer.innerHTML = Object.keys(product.sizes).map(sz => {
+                const available = product.sizes[sz] && !product.isSoldOut;
+                return `
+                    <div class="relative">
+                        <input 
+                            type="radio" 
+                            name="size_select" 
+                            id="size_${sz}" 
+                            value="${sz}" 
+                            ${!available ? 'disabled' : ''}
+                            onchange="onSelectSize('${sz}')"
+                            class="size-radio sr-only"
+                        >
+                        <label 
+                            for="size_${sz}" 
+                            class="block text-center py-2 rounded-lg border border-brand-border text-xs font-semibold cursor-pointer transition"
+                        >
+                            ${sz}
+                        </label>
+                    </div>
+                `;
+            }).join('');
+
+            // Show Modal
+            const modal = document.getElementById('productDetailModal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function setDetailMainImage(url) {
+            document.getElementById('detailMainImage').src = url;
+        }
+
+        function onSelectSize(sz) {
+            selectedSize = sz;
+            document.getElementById('sizeWarning').classList.add('hidden');
+        }
+
+        function closeProductDetail() {
+            document.getElementById('productDetailModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+            currentSelectedProduct = null;
+            selectedSize = null;
+        }
+
+        function copyDressCode() {
+            if (!currentSelectedProduct) return;
+            const code = currentSelectedProduct.dressCode;
+            
+            // Clipboard fallback
+            const tempInput = document.createElement('input');
+            tempInput.value = code;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            alert(`Copied dress code ${code} to clipboard!`);
+        }
+
+        /* ==============================================================================
+         * PRE-FILLED ENQUIRY REDIRECTS (INSTAGRAM & WHATSAPP)
+         * ============================================================================== */
+        function validateSizeSelection() {
+            if (currentSelectedProduct && currentSelectedProduct.isSoldOut) {
+                alert('This item is currently sold out. You can still message us on Instagram to request a restock pre-order!');
+                return true;
+            }
+            if (!selectedSize) {
+                document.getElementById('sizeWarning').classList.remove('hidden');
+                return false;
+            }
+            return true;
+        }
+
+        function enquireOnInstagram() {
+            if (!validateSizeSelection()) return;
+
+            const code = currentSelectedProduct.dressCode;
+            const name = currentSelectedProduct.name;
+            const sizeStr = selectedSize ? `Size: ${selectedSize}` : 'Size: Enquiry';
+            
+            // Pre-formatted message string
+            const message = `Hi ZIVA Trendy Threads! I am interested in ${code} (${name}) in ${sizeStr}. Is this item in stock?`;
+            
+            // Instagram DM URL standard fallback
+            window.open(`https://instagram.com/`, '_blank');
+            
+            // User alert help for easy paste into Instagram DM
+            setTimeout(() => {
+                alert(`Copied enquiry message to clipboard:\n\n"${message}"\n\nPaste this message in our Instagram DM!`);
+            }, 300);
+        }
+
+        function enquireOnWhatsApp() {
+            if (!validateSizeSelection()) return;
+
+            const code = currentSelectedProduct.dressCode;
+            const name = currentSelectedProduct.name;
+            const sizeStr = selectedSize ? `Size ${selectedSize}` : 'Size Enquiry';
+            const phone = "919876543210"; // Boutique WhatsApp Number
+
+            const message = `Hi ZIVA Trendy Threads! I'd like to order/enquire about ${code} (${name}) in ${sizeStr}. Please let me know the payment details.`;
+            const waUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+            
+            window.open(waUrl, '_blank');
+        }
+
+        /* ==============================================================================
+         * SIZE CHART MODAL & TOGGLES
+         * ============================================================================== */
+        function openSizeChart() {
+            document.getElementById('sizeChartModal').classList.remove('hidden');
+        }
+
+        function closeSizeChart() {
+            document.getElementById('sizeChartModal').classList.add('hidden');
+        }
+
+        function toggleSizeUnit(unit) {
+            currentSizeUnit = unit;
+            const inBtn = document.getElementById('unitInchesBtn');
+            const cmBtn = document.getElementById('unitCmBtn');
+
+            if (unit === 'inches') {
+                inBtn.className = "px-4 py-1.5 rounded-full bg-white text-brand-charcoal shadow-sm transition";
+                cmBtn.className = "px-4 py-1.5 rounded-full text-brand-muted hover:text-brand-charcoal transition";
+            } else {
+                cmBtn.className = "px-4 py-1.5 rounded-full bg-white text-brand-charcoal shadow-sm transition";
+                inBtn.className = "px-4 py-1.5 rounded-full text-brand-muted hover:text-brand-charcoal transition";
+            }
+
+            renderSizeTable();
+        }
+
+        function renderSizeTable() {
+            const tbody = document.getElementById('sizeTableBody');
+            const isInch = currentSizeUnit === 'inches';
+
+            tbody.innerHTML = SIZE_CHART_DATA.map(row => `
+                <tr>
+                    <td class="py-2.5 px-3 font-semibold text-brand-charcoal text-left">${row.size}</td>
+                    <td class="py-2.5 px-3">${isInch ? row.bustInches + '"' : row.bustCm + ' cm'}</td>
+                    <td class="py-2.5 px-3">${isInch ? row.waistInches + '"' : row.waistCm + ' cm'}</td>
+                    <td class="py-2.5 px-3">${isInch ? row.hipInches + '"' : row.hipCm + ' cm'}</td>
+                    <td class="py-2.5 px-3">${isInch ? row.lengthInches + '"' : row.lengthCm + ' cm'}</td>
+                </tr>
+            `).join('');
+        }
+
+        // Close modals on clicking backdrop
+        window.onclick = function(event) {
+            const detailModal = document.getElementById('productDetailModal');
+            const sizeModal = document.getElementById('sizeChartModal');
+            if (event.target === detailModal) closeProductDetail();
+            if (event.target === sizeModal) closeSizeChart();
+        };
+
+        // Close modals on ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeProductDetail();
+                closeSizeChart();
+            }
+        });
+    </script>
+</body>
+</html>
